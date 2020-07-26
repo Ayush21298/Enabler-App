@@ -123,6 +123,6 @@ temp/
 /platforms
 
 # Optional to ignore plugin Git clones
-#/plugins
+/plugins
 
 # End of https://www.gitignore.io/api/cordova

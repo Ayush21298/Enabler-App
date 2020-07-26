@@ -21,6 +21,7 @@ otpBoxes.forEach(box => {
 		var otp = checkOtp();
 		if(otp.length === 4) {
 			alert("Testing OTP " + otp);
+			otpSuccess();
 			return;
 		}
 		if(e.target.value.length == 1) {

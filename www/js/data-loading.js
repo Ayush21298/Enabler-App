@@ -4,7 +4,7 @@ window.onload = ()=> {
     var perc = document.querySelector('.loading-perc');
     var val = 0;
     window.setInterval(()=> {
-        val += 1;
+        val += 10;
         perc.innerText = val + "%";
         if(val === 100) {
             window.location.assign("data-restoration-completed.html");

@@ -48,4 +48,5 @@ signInForm.addEventListener("submit", (e)=> {
 	var obj = {};
 	formData.forEach((v,k)=> obj[k]=v)
 	console.log(JSON.stringify(obj));
+	window.location.assign("otp-screen.html");
 });
