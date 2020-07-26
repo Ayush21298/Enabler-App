@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28.5" viewBox="0 0 28 28.5">
+    <defs>
+        <style type="text/css">
+            @font-face {
+              font-family: Montserrat;
+              src: url("../vendor/fonts/Montserrat/Montserrat-Regular.ttf");
+            }
+        </style>
+    </defs>
+    <g id="prefix__Component_166_1" fill="#a8c7ff" data-name="Component 166 – 1" transform="translate(1)">
+        <path id="prefix__Icon_material-share" d="M15.285 13.124a2.094 2.094 0 0 0-1.409.554l-5.127-2.985a1.99 1.99 0 0 0 0-1.007l5.069-2.955a2.152 2.152 0 1 0-.69-1.575 2.354 2.354 0 0 0 .065.5L8.124 8.615a2.157 2.157 0 1 0 0 3.149l5.119 2.991a2.028 2.028 0 0 0-.058.467 2.1 2.1 0 1 0 2.1-2.1z" data-name="Icon material-share" transform="translate(2.179 -3)"/>
+        <text id="prefix__SHARE" font-family="Montserrat-SemiBold, Montserrat" font-size="7px" font-weight="600" letter-spacing="0.032em" transform="translate(13 26.5)">
+            <tspan x="-13.01" y="0">SHARE</tspan>
+        </text>
+    </g>
+</svg>

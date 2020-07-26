@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Data_Restore_Failed_Image" width="250" height="250" data-name="Data Restore Failed Image" viewBox="0 0 250 250">
+    <defs>
+        <style>
+            .prefix__cls-3{fill:#fc6161}
+        </style>
+    </defs>
+    <circle id="prefix__Ellipse_89" cx="125" cy="125" r="125" data-name="Ellipse 89" style="opacity:.156;fill:#fc6161"/>
+    <circle id="prefix__Ellipse_88" cx="98" cy="98" r="98" data-name="Ellipse 88" transform="translate(27 27)" style="opacity:.501;fill:#fc6161"/>
+    <circle id="prefix__Ellipse_87" cx="62" cy="62" r="62" class="prefix__cls-3" data-name="Ellipse 87" transform="translate(63 63)"/>
+    <path id="prefix__Path_304" d="M172.424 240.216h-.952v-26.088a15.1 15.1 0 0 0-15.1-15.1H101.1a15.1 15.1 0 0 0-15.1 15.1v143.12a15.1 15.1 0 0 0 15.1 15.1h55.27a15.1 15.1 0 0 0 15.1-15.1v-98.463h.952z" data-name="Path 304" transform="translate(-4.14 -160.662)" style="fill:#3f3d56"/>
+    <path id="prefix__Path_305" d="M171.588 218.781v142.912a11.277 11.277 0 0 1-11.276 11.278h-55.535A11.276 11.276 0 0 1 93.5 361.695V218.781a11.275 11.275 0 0 1 11.273-11.274h6.739a5.356 5.356 0 0 0 4.96 7.379h31.664a5.356 5.356 0 0 0 4.96-7.379h7.214a11.275 11.275 0 0 1 11.274 11.273z" data-name="Path 305" transform="translate(-7.472 -165.211)" style="fill:#394967"/>
+    <path id="prefix__Icon_ionic-ios-sad" d="M18 3.375A14.625 14.625 0 1 0 32.625 18 14.623 14.623 0 0 0 18 3.375zM12.8 14.07a1.69 1.69 0 1 1-1.547 1.547A1.691 1.691 0 0 1 12.8 14.07zm-.049 10.68a1.127 1.127 0 0 1-1.034-1.575 6.844 6.844 0 0 1 12.558 0 1.124 1.124 0 0 1-1.034 1.575 50.671 50.671 0 0 0-5.14-.281c-2.701 0-5.346.281-5.346.281zM23.2 17.43a1.69 1.69 0 1 1 1.547-1.547A1.691 1.691 0 0 1 23.2 17.43z" class="prefix__cls-3" data-name="Icon ionic-ios-sad" transform="translate(106.625 106.625)"/>
+</svg>

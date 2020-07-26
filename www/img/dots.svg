@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73" height="24" viewBox="0 0 73 24">
+    <defs>
+        <filter id="prefix__Rectangle_113" width="34" height="24" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-color="#fff" flood-opacity=".059"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .prefix__cls-2{fill:#394967}
+        </style>
+    </defs>
+    <g id="prefix__dots" transform="translate(9 6)">
+        <g filter="url(#prefix__Rectangle_113)" transform="translate(-9 -6)">
+            <rect id="prefix__Rectangle_113-2" width="16" height="6" fill="#fff" data-name="Rectangle 113" rx="3" transform="translate(9 6)"/>
+        </g>
+        <rect id="prefix__Rectangle_114" width="6" height="6" class="prefix__cls-2" data-name="Rectangle 114" rx="3" transform="translate(22)"/>
+        <rect id="prefix__Rectangle_115" width="6" height="6" class="prefix__cls-2" data-name="Rectangle 115" rx="3" transform="translate(34)"/>
+        <rect id="prefix__Rectangle_116" width="6" height="6" class="prefix__cls-2" data-name="Rectangle 116" rx="3" transform="translate(46)"/>
+        <rect id="prefix__Rectangle_131" width="6" height="6" class="prefix__cls-2" data-name="Rectangle 131" rx="3" transform="translate(58)"/>
+    </g>
+</svg>

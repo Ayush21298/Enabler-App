@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__SubHeading" width="260" height="50" viewBox="0 0 260 50">
+    <defs>
+        <style type="text/css">
+            @font-face {
+              font-family: Montserrat;
+              src: url("../vendor/fonts/Montserrat/Montserrat-Regular.ttf");
+            }
+            @font-face {
+                font-family: SFProText-Light;
+                src: url("../vendor/fonts/SanFranciscoPro/SF-Pro-Text-Light.otf");
+            }
+            @font-face {
+                font-family: SFCompactDisplay-Regular;
+                src: url("../vendor/fonts/SanFranciscoPro/SF-Pro-Text-Regular.otf");
+            }
+        </style>
+    </defs>
+    <text id="prefix__Back_up_your_WhatsApp_data_to_" fill="#fff" data-name="Back up your WhatsApp data to" font-family="Montserrat-Medium, Montserrat" font-size="16px" font-weight="500" transform="translate(130 15)">
+        <tspan x="-129.976" y="0">Back up your WhatsApp data to</tspan>
+    </text>
+    <g id="prefix__Group_81" data-name="Group 81" transform="translate(-64 -565)">
+        <g id="prefix__Group_80" data-name="Group 80" transform="translate(14 -2)">
+            <text id="prefix__iCloud" fill="#fff" font-family="SFProText-Light, SF Pro Text" font-size="22px" font-weight="300" transform="translate(165 611)">
+                <tspan x="0" y="0">iCloud</tspan>
+            </text>
+        </g>
+        <text id="prefix___" fill="#0a84ff" data-name="􀌋" font-family="SFCompactDisplay-Regular, SF Compact Display" font-size="24px" transform="translate(144 586)">
+            <tspan x="0" y="23">􀌋</tspan>
+        </text>
+    </g>
+</svg>
