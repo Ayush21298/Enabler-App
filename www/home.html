@@ -83,11 +83,16 @@
         </ul>
       </nav> --><!-- .nav-menu -->
 
-      <div onclick = "var ref = window.open(encodeURI('https://ayush21298.pythonanywhere.com/admin/login/?next=/admin/'), '_self', 'location=yes');">
+      <!-- <div onclick = "var ref = window.open(encodeURI('https://ayush21298.pythonanywhere.com/admin/Search/video/'), '_self', 'location=yes');">
                 <h4 href="#">
                     Admin
                 </h4>
-            </div>
+            </div> -->
+        <div onclick = "var ref = window.open(encodeURI('http://18.224.92.224:8000/admin/Search/video/'), '_self', 'location=yes');">
+	        <h4 href="#">
+	            Admin
+	        </h4>
+	    </div>
 
     </div>
   </header><!-- End Header -->
@@ -149,8 +154,9 @@
 
         <script type="text/javascript">
 
-          var base_url = "https://ayush21298.pythonanywhere.com";
+          // var base_url = "https://ayush21298.pythonanywhere.com";
           // var base_url = "http://127.0.0.1:8000";
+          var base_url = "http://18.224.92.224:8000";
 
           function search_btn() {
 
@@ -167,7 +173,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${data["results"][i]["image_125_H"]}">
+                        <img style="width:64px; height:64px;" src="${data["results"][i]["image_125_H"]}">
                       </div>
                       <h4><a target="_blank" href="https://www.udemy.com${data["results"][i]["url"]}">${data["results"][i]["title"]}</a></h4>
                       <p>${data["results"][i]["headline"]}</p>
@@ -190,7 +196,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <!-- <img style="width:'64px'; height:'64px';" src="${data["elements"][i]["photoUrl"]}"> -->
+                        <img style="width:64px; height:64px;" src="${data["elements"][i]["photoUrl"]}">
                       </div>
                       <h4><a target="_blank" href="https://www.coursera.org/learn/${data["elements"][i]["slug"]}">${data["elements"][i]["name"]}</a></h4>
                       <p>${data["elements"][i]["description"].split('.')[0] + '.'}</p>
@@ -215,7 +221,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${data[i]["image_url"]}">
+                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
                       </div>
                       <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
                       <p>${data[i]["short_description"]}</p>
@@ -241,7 +247,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${data[i]["image_url"]}">
+                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
                       </div>
                       <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
                       <p>${data[i]["short_description"]}</p>
@@ -263,7 +269,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${data["results"][i]["image_125_H"]}">
+                        <img style="width:64px; height:64px;" src="${data["results"][i]["image_125_H"]}">
                       </div>
                       <h4><a target="_blank" href="https://www.udemy.com${data["results"][i]["url"]}">${data["results"][i]["title"]}</a></h4>
                       <p>${data["results"][i]["headline"]}</p>
@@ -284,7 +290,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <!-- <img style="width:'64px'; height:'64px';" src="${data["elements"][i]["photoUrl"]}"> -->
+                        <img style="width:64px; height:64px;" src="${data["elements"][i]["photoUrl"]}">
                       </div>
                       <h4><a target="_blank" href="https://www.coursera.org/learn/${data["elements"][i]["slug"]}">${data["elements"][i]["name"]}</a></h4>
                       <p>${data["elements"][i]["description"].split('.')[0] + '.'}</p>
@@ -307,7 +313,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${data[i]["image_url"]}">
+                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
                       </div>
                       <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
                       <p>${data[i]["short_description"]}</p>
@@ -331,7 +337,7 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                           <div class="icon-box">
                             <div class="icon">
-                              <img style="width:'64px'; height:'64px';" src="${data[i]["image_url"]}">
+                              <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
                             </div>
                             <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
                             <p>${data[i]["short_description"]}</p>
@@ -369,7 +375,7 @@
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:'64px'; height:'64px';" src="${base_url + "/" + data[i]["thumbnail"]}">
+                        <img style="width:64px; height:64px;" src="${base_url + "/" + data[i]["thumbnail"]}">
                       </div>
                       <h4><a target="_blank" href="${url}">${data[i]["title"]}</a></h4>
                       <p>${data[i]["description"]}</p>
