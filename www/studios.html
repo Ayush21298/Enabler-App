@@ -132,14 +132,11 @@
             <input type="text" class="form-control" id="searchInput" aria-describedby="emailHelp" placeholder="Enter Keyword">
           </div>
           <div class="form-group">
-            <label for="platformInput">Platform</label>
+            <label for="platformInput">Sort By</label>
             <select class="form-control" id="platformInput">
               <optgroup>
-                <option value="Udemy">Udemy</option>
-                <option value="Coursera">Coursera</option>
-                <option value="edX">edX</option>
-                <option value="HarvardX">HarvardX</option>
-                <option value="All">All</option>
+                <option value="Name">Name</option>
+                <option value="Date">Date</option>
                 <!-- <option value="All">Udemy + Coursera + edX + HarvardX</option> -->
               </optgroup>
               <!-- <optgroup>
@@ -165,70 +162,30 @@
 
             // alert($("#platformInput").val());
 
-            if($("#platformInput").val() == "Udemy"){
-              $.get(base_url+"/search/udemy", {"search" : $("#searchInput").val()}, function(data,status) {
-                // alert(JSON.stringify(data));
-
-                $("#searchContainer").html("");
-
-                for (var i = 0; i < data["results"].length; i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data["results"][i]["image_125_H"]}">
-                      </div>
-                      <h4><a target="_blank" href="https://www.udemy.com${data["results"][i]["url"]}">${data["results"][i]["title"]}</a></h4>
-                      <p>${data["results"][i]["headline"]}</p>
-                      <br><h5>Instructors: ${data["results"][i]["visible_instructors"][0]["display_name"]}</h5>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-              });
-            } else if($("#platformInput").val() == "Coursera"){
-              $.get(base_url+"/search/coursera", {"search" : $("#searchInput").val()}, function(data,status) {
-                // alert(JSON.stringify(data));
-
-                $("#searchContainer").html("");
-
-                for (var i = 0; i < data["elements"].length; i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data["elements"][i]["photoUrl"]}">
-                      </div>
-                      <h4><a target="_blank" href="https://www.coursera.org/learn/${data["elements"][i]["slug"]}">${data["elements"][i]["name"]}</a></h4>
-                      <p>${data["elements"][i]["description"].split('.')[0] + '.'}</p>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-              });
-            } else if($("#platformInput").val() == "edX"){
-              $.get(base_url+"/search/edx", {"search" : $("#searchInput").val()}, function(dataa,status) {
-
-                data = dataa["objects"]["results"]
+            if($("#platformInput").val() == "Date"){
+              $.get(base_url+"/search/studios/date", {"search" : $("#searchInput").val()}, function(data,status) {
 
                 // alert(JSON.stringify(data));
 
                 $("#searchContainer").html("");
 
                 for (var i = 0; i < data.length; i++) {
+
+                  var url="";
+                  if(data[i]["url"] != "-"){
+                    url = data[i]["url"]
+                  } else {
+                    url = base_url + "/" + data[i]["file"]
+                  }
+
                   var temp = `
                   <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                       <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
+                        <img style="width:64px; height:64px;" src="${base_url + "/" + data[i]["thumbnail"]}">
                       </div>
-                      <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
-                      <p>${data[i]["short_description"]}</p>
-                      <br><h5>Organisation: ${data[i]["org"]}</h5>
+                      <h4><a target="_blank" href="${url}">${data[i]["title"]}</a></h4>
+                      <p>${data[i]["description"]}</p>
                     </div>
                   </div>
                   `
@@ -236,130 +193,8 @@
                 }
 
               });
-            } else if($("#platformInput").val() == "HarvardX"){
-              $.get(base_url+"/search/harvardx", {"search" : $("#searchInput").val()}, function(dataa,status) {
-
-                data = dataa["objects"]["results"]
-
-                // alert(JSON.stringify(data));
-
-                $("#searchContainer").html("");
-
-                for (var i = 0; i < data.length; i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
-                      </div>
-                      <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
-                      <p>${data[i]["short_description"]}</p>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-              });
-            } else if($("#platformInput").val() == "All"){
-              $.get(base_url+"/search/udemy", {"search" : $("#searchInput").val()}, function(data,status) {
-                // alert(JSON.stringify(data));
-
-                $("#searchContainer").html("");
-
-                for (var i = 0; (i < data["results"].length) && (i<3); i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data["results"][i]["image_125_H"]}">
-                      </div>
-                      <h4><a target="_blank" href="https://www.udemy.com${data["results"][i]["url"]}">${data["results"][i]["title"]}</a></h4>
-                      <p>${data["results"][i]["headline"]}</p>
-                      <br><h5>Instructors: ${data["results"][i]["visible_instructors"][0]["display_name"]}</h5>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-                $.get(base_url+"/search/coursera", {"search" : $("#searchInput").val()}, function(data,status) {
-                // alert(JSON.stringify(data));
-
-                // $("#searchContainer").html("");
-
-                for (var i = 0; (i < data["elements"].length) && (i<3); i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data["elements"][i]["photoUrl"]}">
-                      </div>
-                      <h4><a target="_blank" href="https://www.coursera.org/learn/${data["elements"][i]["slug"]}">${data["elements"][i]["name"]}</a></h4>
-                      <p>${data["elements"][i]["description"].split('.')[0] + '.'}</p>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-                $.get(base_url+"/search/edx", {"search" : $("#searchInput").val()}, function(dataa,status) {
-
-                data = dataa["objects"]["results"]
-
-                // alert(JSON.stringify(data));
-
-                // $("#searchContainer").html("");
-
-                for (var i = 0; (i < data.length) && (i<3); i++) {
-                  var temp = `
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                      <div class="icon">
-                        <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
-                      </div>
-                      <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
-                      <p>${data[i]["short_description"]}</p>
-                      <br><h5>Organisation: ${data[i]["org"]}</h5>
-                    </div>
-                  </div>
-                  `
-                  $("#searchContainer").html($("#searchContainer").html() + temp);
-                }
-
-                $.get(base_url+"/search/harvardx", {"search" : $("#searchInput").val()}, function(dataa,status) {
-
-                      data = dataa["objects"]["results"]
-
-                      // alert(JSON.stringify(data));
-
-                      // $("#searchContainer").html("");
-
-                      for (var i = 0; (i < data.length) && (i<3); i++) {
-                        var temp = `
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                          <div class="icon-box">
-                            <div class="icon">
-                              <img style="width:64px; height:64px;" src="${data[i]["image_url"]}">
-                            </div>
-                            <h4><a target="_blank" href="${data[i]["marketing_url"]}">${data[i]["title"]}</a></h4>
-                            <p>${data[i]["short_description"]}</p>
-                          </div>
-                        </div>
-                        `
-                        $("#searchContainer").html($("#searchContainer").html() + temp);
-                      }
-
-                    });
-
-                  });
-
-                });
-
-              });
-
-            } else if($("#platformInput").val() == "Enabler Studios"){
-              $.get(base_url+"/search/studios", {"search" : $("#searchInput").val()}, function(data,status) {
+            } else if($("#platformInput").val() == "Name"){
+              $.get(base_url+"/search/studios/name", {"search" : $("#searchInput").val()}, function(data,status) {
 
                 // alert(JSON.stringify(data));
 
